@@ -474,11 +474,24 @@ h2 {
 }
 .menu-card--cta .cta:hover { background: rgba(0,0,0,.4); transform: none; }
 
+.menu-badge-tag {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .5rem;
+  border: 1px solid rgba(201,168,76,.35);
+  padding: .2rem .6rem;
+  border-radius: 2px;
+}
+
 .menu-card-icon {
   width: 44px;
   height: 44px;
   color: var(--accent);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 .menu-card--feature .menu-card-icon { color: var(--gold); }
 

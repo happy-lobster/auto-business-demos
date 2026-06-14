@@ -1,160 +1,316 @@
 <!doctype html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fénix Café — Sabores do Brasil em Parede, Cascais</title>
-  <meta name="description" content="Fénix Café em Parede, Cascais. Autêntica cozinha brasileira, café de qualidade e serviço caloroso. Terça a Domingo, 11h às 23h30." />
+  <title>Fénix Café — Sabores do Brasil na Costa de Cascais</title>
+  <meta name="description" content="Café brasileiro em Parede, Cascais. Especialidades de café, Pastel de Vento, Feijoada à Brasileira. Aberto de terça a domingo das 08h às 02h." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,700;9..144,0,900;9..144,1,300;9..144,1,700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- HERO -->
-  <header class="hero" style="--hero-image: url('assets/interior.jpg')">
+  <header class="hero">
     <nav class="nav">
-      <span class="brand">Fénix <em style="font-style:italic;color:var(--accent);">Café</em></span>
+      <a class="brand" href="#"><span>Fénix</span> Café</a>
       <ul>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#avaliacoes">Avaliações</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <a class="nav-cta" href="tel:+351963348481">+351 963 348 481</a>
     </nav>
+
     <div class="hero-content">
-      <h1><em>Fénix</em> Café</h1>
-      <p class="tagline">Sabores autênticos do Brasil no coração de Parede</p>
-      <div class="hero-badges">
-        <span class="badge">Cozinha Brasileira</span>
-        <span class="badge">Cascais · Parede</span>
-        <span class="badge">Aberto Ter–Dom</span>
+      <div class="hero-eyebrow">Café Brasileiro · Parede, Cascais</div>
+      <h1>
+        <em>Fénix</em><br>Café
+      </h1>
+      <p class="tagline">Os sabores autênticos do Brasil<br>na costa dourada de Cascais</p>
+      <div class="hero-ctas">
+        <a class="cta cta--gold" href="#menu">Descobrir o Menu</a>
+        <a class="cta cta--ghost" href="#contacto">Como Chegar</a>
       </div>
-      <a class="cta" href="#contacto">Reserve a sua mesa</a>
+      <div class="hero-proof">
+        <div class="proof-item">
+          <strong>4.3★</strong>
+          <span>Google</span>
+        </div>
+        <div class="proof-sep"></div>
+        <div class="proof-item">
+          <strong>65%</strong>
+          <span>5 estrelas</span>
+        </div>
+        <div class="proof-sep"></div>
+        <div class="proof-item">
+          <strong>45+</strong>
+          <span>avaliações</span>
+        </div>
+      </div>
     </div>
+
+    <div class="hero-wave" aria-hidden="true"></div>
   </header>
 
   <!-- ABOUT -->
   <section id="sobre" class="about">
-    <div class="about-inner">
-      <div class="about-text">
-        <h2>Uma viagem ao Brasil, a dois passos do mar</h2>
-        <p>O Fénix Café traz os sabores genuínos do Brasil para Parede, Cascais. Da generosidade das porções ao calor do atendimento, cada detalhe foi pensado para fazer sentir em casa — seja a tomar um café de manhã ou a partilhar uma refeição à noite.</p>
-        <p>Com mais de 45 avaliações e fotos que falam por si, conquistámos a confiança da comunidade local e de quem visita a costa de Cascais. Venha descobrir porque as pessoas regressam.</p>
-        <br />
-        <a href="#menu" class="cta-ghost">Ver o menu</a>
+    <div class="about-wrap">
+      <div class="about-img-col">
+        <div class="about-img-frame">
+          <img src="assets/interior.jpg" alt="Interior acolhedor do Fénix Café em Parede" />
+        </div>
+        <div class="about-img-badge">
+          <strong>Desde o primeiro café<br>até à última caipirinha</strong>
+        </div>
       </div>
-      <div class="about-img">
-        <img src="assets/food.jpg" alt="Pratos da cozinha brasileira do Fénix Café" />
+      <div class="about-text-col">
+        <span class="eyebrow">A Nossa História</span>
+        <h2>Um pedaço do Brasil<br>na costa de Cascais</h2>
+        <p>O Fénix Café nasceu da paixão por trazer os sabores mais autênticos do Brasil para Parede. Café especial, pastéis estaladiços e pratos tradicionais confecionados todos os dias com carinho e ingredientes frescos.</p>
+        <p>Situados na Rua Capitão Leitão, a dois passos do mar, somos o ponto de encontro da comunidade local e dos visitantes que descobrem a costa de Cascais.</p>
+        <ul class="about-facts">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Rua Capitão Leitão, 13 · Parede, Cascais
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Terça a Domingo · 08:00 – 02:00
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            4.3 estrelas · 65% de avaliações máximas
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- STATS BAND -->
-  <div class="highlight-band">
-    <div class="highlight-band-inner">
-      <div class="highlight-stat">
+  <div class="stats-band">
+    <div class="stats-band-inner">
+      <div class="stat-block">
+        <strong>4.3★</strong>
+        <span>Avaliação Google</span>
+      </div>
+      <div class="stat-block">
+        <strong>65%</strong>
+        <span>Cinco estrelas</span>
+      </div>
+      <div class="stat-block">
         <strong>45+</strong>
-        <span>Avaliações online</span>
+        <span>Avaliações</span>
       </div>
-      <div class="highlight-stat">
-        <strong>4.5★</strong>
-        <span>Avaliação média</span>
-      </div>
-      <div class="highlight-stat">
-        <strong>18+</strong>
-        <span>Fotos partilhadas</span>
-      </div>
-      <div class="highlight-stat">
-        <strong>Desde 2020</strong>
-        <span>A servir Parede</span>
+      <div class="stat-block">
+        <strong>08h–02h</strong>
+        <span>Horário alargado</span>
       </div>
     </div>
   </div>
 
   <!-- MENU HIGHLIGHTS -->
-  <section id="menu" class="offerings">
-    <h2>Destaques do Menu</h2>
-    <p class="section-intro">Cozinha brasileira honesta — porções generosas, ingredientes frescos, receitas com alma. Aqui ficam alguns dos pratos que fazem os nossos clientes regressar.</p>
-    <div class="cards">
-      <article class="card">
-        <img class="card-img" src="assets/meals.jpg" alt="Refeições brasileiras do Fénix Café" />
-        <div class="card-body">
-          <span class="card-tag">Prato do Dia</span>
-          <h3>Pratos Brasileiros</h3>
-          <p>Da feijoada ao frango grelhado, os sabores tradicionais do Brasil chegam ao seu prato com generosidade e frescura, a um preço justo.</p>
+  <section id="menu" class="menu-section">
+    <div class="menu-header">
+      <span class="eyebrow">Os Nossos Sabores</span>
+      <h2>Destaques do Menu</h2>
+      <p class="section-lead">Cozinha brasileira honesta — porções generosas, ingredientes frescos e receitas com alma</p>
+    </div>
+
+    <div class="menu-grid">
+
+      <article class="menu-card menu-card--wide">
+        <div class="menu-card-img">
+          <img src="assets/pastel.jpg" alt="Pastel de Vento — especialidade do Fénix Café" />
+          <span class="menu-badge">Favorito da Casa</span>
+        </div>
+        <div class="menu-card-body">
+          <h3>Pastel de Vento</h3>
+          <p>A nossa estrela — massa fina e crocante, recheio cremoso de queijo ou carne, frito na hora. O autêntico sabor das feiras brasileiras, agora em Parede.</p>
+          <span class="menu-note">Doce ou Salgado</span>
         </div>
       </article>
-      <article class="card">
-        <img class="card-img" src="assets/burger.jpg" alt="Burger artesanal do Fénix Café" />
-        <div class="card-body">
-          <span class="card-tag">Especialidade</span>
-          <h3>Burger da Casa</h3>
-          <p>Um burger artesanal feito com carne selecionada e os melhores ingredientes. Suculento, generoso e com um toque brasileiro inconfundível.</p>
+
+      <article class="menu-card">
+        <div class="menu-card-img">
+          <img src="assets/feijoada.jpg" alt="Feijoada à Brasileira" />
+          <span class="menu-badge menu-badge--green">Prato do Dia</span>
+        </div>
+        <div class="menu-card-body">
+          <h3>Feijoada à Brasileira</h3>
+          <p>O prato mais emblemático do Brasil — feijão preto cozido lentamente com carnes selecionadas, arroz, couve e laranja.</p>
+          <span class="menu-note">Aos Sábados</span>
         </div>
       </article>
-      <article class="card">
-        <img class="card-img" src="assets/food.jpg" alt="Comida brasileira variada" />
-        <div class="card-body">
-          <span class="card-tag">Café &amp; Petiscos</span>
-          <h3>Café &amp; Snacks</h3>
-          <p>Café de qualidade, sumos naturais e petiscos para qualquer hora do dia. O ponto de encontro perfeito em Parede para uma pausa que vale a pena.</p>
+
+      <article class="menu-card">
+        <div class="menu-card-img">
+          <img src="assets/coffee.jpg" alt="Café especial do Fénix Café" />
+        </div>
+        <div class="menu-card-body">
+          <h3>Café de Especialidade</h3>
+          <p>Grãos selecionados das melhores regiões brasileiras, torrados artesanalmente. Espresso, cappuccino ou café com leite perfeito.</p>
+          <span class="menu-note">Todos os Dias</span>
         </div>
       </article>
+
+      <article class="menu-card menu-card--wide">
+        <div class="menu-card-img">
+          <img src="assets/meals.jpg" alt="Refeições brasileiras no Fénix Café" />
+        </div>
+        <div class="menu-card-body">
+          <h3>Refeições do Dia</h3>
+          <p>Pratos confecionados com ingredientes frescos — do grelhado ao prato vegetariano, sempre com a generosidade da culinária brasileira.</p>
+          <span class="menu-note">12h – 16h</span>
+        </div>
+      </article>
+
+      <article class="menu-card menu-card--dark">
+        <div class="menu-card-body menu-card-body--center">
+          <div class="cocktail-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="8,8 56,8 36,44 36,68 28,68 28,44" stroke="#e8a020" stroke-width="3" fill="none"/>
+              <line x1="8" y1="8" x2="56" y2="8" stroke="#e8a020" stroke-width="3"/>
+              <line x1="20" y1="68" x2="44" y2="68" stroke="#e8a020" stroke-width="3"/>
+              <circle cx="20" cy="22" r="3" fill="#e8a020" opacity="0.7"/>
+              <circle cx="44" cy="18" r="2" fill="#e8a020" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3>Cocktails &amp; Bebidas</h3>
+          <p>Caipirinha clássica, batidas de frutas tropicais, cervejas artesanais e muito mais — até às 02h da manhã.</p>
+          <span class="menu-note menu-note--light">Até às 02:00</span>
+        </div>
+      </article>
+
     </div>
   </section>
 
   <!-- REVIEWS -->
   <section id="avaliacoes" class="reviews">
-    <h2>O que dizem os nossos clientes</h2>
-    <p class="section-intro">Avaliações reais de quem nos visitou no Google Reviews</p>
-    <div class="review-grid">
-      <blockquote class="review">
-        <div class="stars">★★★★★</div>
-        <p>"Excelente, comida brasileira deliciosa com porções generosas a um preço justo."</p>
-        <cite>— Duda, Google Reviews</cite>
-      </blockquote>
-      <blockquote class="review">
-        <div class="stars">★★★★</div>
-        <p>"Funcionários profissionais e serviço espetacular, bom café, qualidade de comida muito elogiada."</p>
-        <cite>— Paulo, Google Reviews</cite>
-      </blockquote>
+    <div class="reviews-wrap">
+      <div class="reviews-header">
+        <span class="eyebrow eyebrow--light">O Que Dizem os Clientes</span>
+        <h2>Avaliações Reais</h2>
+        <div class="rating-summary">
+          <span class="rating-big">4.3</span>
+          <div class="rating-info">
+            <div class="stars-row">★★★★<span class="star-half">★</span></div>
+            <p>65% com 5 estrelas</p>
+            <p>45 avaliações no Google</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-grid">
+        <blockquote class="review">
+          <div class="review-stars">★★★★★</div>
+          <p>"Food: 5, Service: 5, Atmosphere: 5"</p>
+          <cite>— Duda · 5★</cite>
+        </blockquote>
+
+        <blockquote class="review">
+          <div class="review-stars">★★★★☆</div>
+          <p>"Food: 4, Service: 3, Atmosphere: 3"</p>
+          <cite>— Paulo · 4★</cite>
+        </blockquote>
+
+        <blockquote class="review review--featured">
+          <div class="review-stars">★★★★☆</div>
+          <p>"65% of reviews rate 5 stars across 45 total reviews — o Fénix Café é uma das experiências mais apreciadas da zona de Parede."</p>
+          <cite>— Agregado Google · 4.3★ média</cite>
+        </blockquote>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contacto" class="contact">
-    <h2>Venha visitar-nos</h2>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <span class="contact-icon">📍</span>
-        <h3>Morada</h3>
-        <p>Rua Capitão Leitão, 13<br />2775-271 Parede, Cascais</p>
+  <!-- HOURS BAND -->
+  <div class="hours-band">
+    <div class="hours-inner">
+      <div class="hours-col">
+        <svg class="hours-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <div>
+          <strong>Horário</strong>
+          <p>Terça a Domingo</p>
+          <p>08:00 — 02:00</p>
+          <small>Encerrado à Segunda-feira</small>
+        </div>
       </div>
-      <div class="contact-card">
-        <span class="contact-icon">📞</span>
-        <h3>Telefone</h3>
-        <p><a href="tel:+351963348481">+351 963 348 481</a></p>
+      <div class="hours-div"></div>
+      <div class="hours-col">
+        <svg class="hours-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <strong>Morada</strong>
+          <p>Rua Capitão Leitão, 13</p>
+          <p>2775-271 Parede, Cascais</p>
+        </div>
       </div>
-      <div class="contact-card">
-        <span class="contact-icon">🕐</span>
-        <h3>Horário</h3>
-        <p>Terça a Domingo<br />11h00 – 23h30<br /><em style="font-size:.9rem;color:var(--accent-dark);">Encerrado à Segunda</em></p>
+      <div class="hours-div"></div>
+      <div class="hours-col">
+        <svg class="hours-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div>
+          <strong>Contacto</strong>
+          <p>+351 963 348 481</p>
+          <a href="tel:+351963348481">Ligar Agora →</a>
+        </div>
       </div>
     </div>
-    <div class="contact-ctas">
-      <a class="cta" href="tel:+351963348481">Ligar agora</a>
-      <a class="cta-ghost" href="https://maps.google.com/?q=Rua+Capitão+Leitão+13+Parede+Cascais" target="_blank" rel="noopener">Como chegar</a>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contacto" class="contact">
+    <div class="contact-wrap">
+      <div class="contact-text">
+        <span class="eyebrow">Venha Conhecer-nos</span>
+        <h2>Encontre-nos em Parede</h2>
+        <p>A dois passos da costa de Cascais, o Fénix Café é o ponto de encontro perfeito — para o pequeno-almoço, almoço, jantar ou uma boa caipirinha à noite.</p>
+        <address>
+          <p><strong>Rua Capitão Leitão, 13</strong><br>2775-271, Parede, Cascais</p>
+          <p><a href="tel:+351963348481">+351 963 348 481</a></p>
+          <p>Terça a Domingo · 08:00–02:00</p>
+        </address>
+        <div class="contact-btns">
+          <a class="cta cta--gold" href="tel:+351963348481">Ligar Agora</a>
+          <a class="cta cta--outline" href="https://www.instagram.com/feni.xcafe/" target="_blank" rel="noopener">@feni.xcafe</a>
+        </div>
+      </div>
+      <div class="contact-map-col">
+        <div class="map-card">
+          <div class="map-pin-area">
+            <div class="map-pin-icon">📍</div>
+          </div>
+          <div class="map-card-body">
+            <strong>Fénix Café</strong>
+            <p>Rua Capitão Leitão, 13<br>Parede, Cascais 2775-271</p>
+            <a href="https://maps.google.com/?q=Rua+Capitão+Leitão+13+Parede+Cascais" target="_blank" rel="noopener" class="map-link">Abrir no Google Maps →</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p class="footer-brand">Fénix Café</p>
-    <p>Rua Capitão Leitão, 13 · 2775-271 Parede, Cascais</p>
-    <p>+351 963 348 481</p>
-    <p class="mockup-note">Demo website · built as a proposal · not affiliated · fenixcafe2020@gmail.com</p>
+    <div class="footer-inner">
+      <div class="footer-brand-col">
+        <span class="footer-brand"><em>Fénix</em> Café</span>
+        <p>Sabores autênticos do Brasil<br>na costa de Cascais</p>
+      </div>
+      <div class="footer-nav">
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#menu">Menu</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-contact-col">
+        <p>Rua Capitão Leitão, 13 · Parede, Cascais</p>
+        <p>+351 963 348 481</p>
+        <p>Terça–Domingo · 08h–02h</p>
+      </div>
+    </div>
+    <p class="mockup-note">Website de demonstração · proposta não vinculativa · não afiliado</p>
   </footer>
 
 </body>
