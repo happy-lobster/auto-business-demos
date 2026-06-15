@@ -1,0 +1,655 @@
+/*
+  THEME: Aquafalls Spa Hotel
+  Luxury Nature Hotel & Spa — Peneda-Gerês National Park, Vieira do Minho
+  ────────────────────────────────────────────────────────────────────────
+  Palette derived from the misty valley photograph (hero.jpg):
+    --accent:       #3d6b50   deep forest green (canopy, park, calm)
+    --accent-dark:  #274538   darker forest for hover / depth
+    --accent-gold:  #b8935a   antique gold (spa luxury, stone warmth)
+    --gold-dark:    #9a7640   gold hover
+    --ink:          #1a201d   near-black with cool green tint
+    --muted:        #566360   muted sage for body text
+    --bg:           #f9f8f4   warm parchment (natural stone, linen)
+    --bg-alt:       #eeeae1   deeper parchment for alternating sections
+    --bg-dark:      #141918   deep forest night for hero, strips, footer
+
+  Typography:
+    Display:  Cormorant Garamond (elegant classical serif — resort prestige)
+    Body/UI:  Jost (geometric humanist sans — clean, contemporary)
+
+  Hero: full-bleed misty valley photograph with layered gradient
+  Motif: gold horizontal rules, 2px dividers; editorial whitespace;
+         gradient experience cards (no broken images)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+  --accent:       #3d6b50;
+  --accent-dark:  #274538;
+  --accent-gold:  #b8935a;
+  --gold-dark:    #9a7640;
+  --ink:          #1a201d;
+  --muted:        #566360;
+  --bg:           #f9f8f4;
+  --bg-alt:       #eeeae1;
+  --bg-dark:      #141918;
+  --radius:       10px;
+  --maxw:         1140px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Jost', system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+/* ── UTILITIES ── */
+.section-label {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 0.6rem;
+}
+.gold-rule {
+  width: 44px;
+  height: 2px;
+  background: var(--accent-gold);
+  margin: 1.1rem 0 2rem;
+}
+
+/* ── NAV ── */
+.nav {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 2.5rem;
+  max-width: calc(var(--maxw) + 5rem);
+  margin-inline: auto;
+  width: 100%;
+}
+.brand {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.45rem;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.nav ul { list-style: none; display: flex; gap: 2.25rem; }
+.nav a {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  transition: color 0.2s;
+}
+.nav a:hover { color: var(--accent-gold); }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(10,20,14,0.3) 0%,
+      rgba(10,20,14,0.5) 55%,
+      rgba(10,20,14,0.82) 100%
+    ),
+    var(--hero-image) center 35% / cover no-repeat,
+    var(--bg-dark);
+}
+.hero-content {
+  margin: auto;
+  text-align: center;
+  padding: 9rem 2rem 5rem;
+  max-width: 860px;
+}
+.hero-content .section-label { color: rgba(184,147,90,0.9); }
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(3rem, 8vw, 5.6rem);
+  font-weight: 300;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  margin: 0.4rem 0 0;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+}
+.hero-content h1 em {
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(255,255,255,0.95);
+}
+.hero-tagline {
+  font-size: clamp(0.95rem, 2.2vw, 1.2rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.85);
+  margin: 1.4rem 0 2.2rem;
+}
+.hero-badges {
+  display: flex;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.badge {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  border: 1px solid rgba(184,147,90,0.5);
+  padding: 0.42rem 1rem;
+  border-radius: 2px;
+  backdrop-filter: blur(4px);
+  background: rgba(0,0,0,0.15);
+}
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── BUTTONS ── */
+.cta {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.9rem 2.1rem;
+  border-radius: 2px;
+  transition: all 0.22s;
+  cursor: pointer;
+}
+.cta-primary { background: var(--accent-gold); color: #fff; }
+.cta-primary:hover { background: var(--gold-dark); transform: translateY(-2px); }
+.cta-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.55);
+}
+.cta-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+.cta-gold { background: var(--accent-gold); color: #fff; }
+.cta-gold:hover { background: var(--gold-dark); transform: translateY(-2px); }
+.cta-call {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid rgba(26,32,29,0.25);
+}
+.cta-call:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Scroll hint */
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.scroll-line {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.6));
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+.scroll-text {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1; }
+}
+
+/* ── STAT STRIP ── */
+.intro-strip {
+  background: var(--bg-dark);
+  padding: 2.5rem 2rem;
+}
+.intro-strip-inner {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.stat {
+  text-align: center;
+  padding: 0.75rem 3rem;
+}
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--accent-gold);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.35rem;
+}
+.stat-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+/* ── ABOUT ── */
+.about { background: var(--bg-alt); padding: 6rem 2rem; }
+.about .section-inner { max-width: var(--maxw); margin-inline: auto; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.about-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.15;
+}
+.about-text p {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-top: 0.9rem;
+}
+.about-visual {
+  position: relative;
+}
+.about-photo {
+  width: 100%;
+  border-radius: var(--radius);
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+}
+.about-caption {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ── EXPERIENCES ── */
+.experiences { background: var(--bg); padding: 6rem 2rem; }
+.experiences .section-inner { max-width: var(--maxw); margin-inline: auto; }
+.experiences h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.15;
+}
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 0;
+}
+.exp-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-alt);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.exp-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.13); }
+
+/* Gradient card tops — intentional design, not broken images */
+.exp-visual {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+.exp-visual--spa {
+  background: linear-gradient(145deg, #1e4032 0%, #2e6b50 45%, #4a8a68 80%, #5e9e7c 100%);
+}
+.exp-visual--dining {
+  background: linear-gradient(145deg, #2a1e0e 0%, #5c3c1a 45%, #8a5a2a 80%, #b87a3e 100%);
+}
+.exp-visual--pool {
+  background: linear-gradient(145deg, #0d2b3e 0%, #1a4f6e 45%, #2673a0 80%, #3a8fba 100%);
+}
+.exp-visual--rooms {
+  background: linear-gradient(145deg, #28221c 0%, #4a3c30 45%, #6e5840 80%, #9a7e62 100%);
+}
+.exp-icon {
+  font-size: 2.4rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1;
+}
+.exp-visual-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+.exp-card-body { padding: 1.5rem 1.4rem; }
+.exp-card-body h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.exp-card-body p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.exp-tag {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ── NATURE BANNER ── */
+.nature-banner {
+  background:
+    linear-gradient(
+      rgba(10,20,14,0.72),
+      rgba(10,20,14,0.8)
+    ),
+    url('assets/hero.jpg') center 60% / cover no-repeat,
+    var(--bg-dark);
+  color: #fff;
+  padding: 7rem 2rem;
+  text-align: center;
+}
+.nature-banner-inner {
+  max-width: 680px;
+  margin-inline: auto;
+}
+.nature-banner h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.15;
+  margin: 0.5rem 0 1.5rem;
+}
+.nature-banner p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.8;
+  margin-bottom: 2.25rem;
+}
+
+/* ── REVIEWS ── */
+.reviews { background: var(--bg-alt); padding: 6rem 2rem; }
+.reviews .section-inner { max-width: var(--maxw); margin-inline: auto; }
+.reviews h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.15;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 0;
+}
+.review-card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 2.25rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  border-top: 3px solid var(--accent-gold);
+  position: relative;
+}
+/* Large decorative quote mark */
+.review-card::before {
+  content: '\201C';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(184,147,90,0.15);
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+}
+.review-stars {
+  color: var(--accent-gold);
+  font-size: 1rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.1rem;
+}
+.review-card blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 1.4rem;
+  position: relative;
+  z-index: 1;
+}
+.review-card cite {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.cite-tag {
+  font-weight: 400;
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.review-count {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── CONTACT ── */
+.contact { background: var(--bg); padding: 6rem 2rem; }
+.contact .section-inner { max-width: var(--maxw); margin-inline: auto; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.contact-info h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.15;
+}
+.contact-intro {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-top: 0.5rem;
+}
+.contact-list {
+  list-style: none;
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.contact-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.contact-list strong {
+  display: block;
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+.contact-list a { color: var(--accent); }
+.contact-list a:hover { text-decoration: underline; }
+.contact-icon {
+  font-size: 0.4rem;
+  color: var(--accent-gold);
+  margin-top: 0.65rem;
+  flex-shrink: 0;
+}
+
+/* Book-direct box */
+.book-box {
+  background: var(--bg-dark);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 3rem 2.5rem;
+}
+.book-box-header { margin-bottom: 1.25rem; }
+.book-box h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.15;
+}
+.book-box p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+}
+.book-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.book-actions .cta { text-align: center; display: block; }
+.cta-call {
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+.cta-call:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
+.book-note {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3) !important;
+  text-align: center;
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+  letter-spacing: 0.04em;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: #0c1210;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  padding: 3.5rem 2rem;
+  font-size: 0.84rem;
+  line-height: 1.9;
+}
+.footer-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.06em;
+  display: block;
+}
+.footer-rule {
+  width: 36px;
+  height: 1px;
+  background: var(--accent-gold);
+  margin: 1.1rem auto;
+  opacity: 0.7;
+}
+.mockup-note {
+  font-size: 0.7rem;
+  margin-top: 0.75rem;
+  color: rgba(255,255,255,0.18);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .exp-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-photo { aspect-ratio: 16/9; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .stat { padding: 0.75rem 2rem; }
+}
+
+@media (max-width: 640px) {
+  .nav ul { display: none; }
+  .hero-content { padding: 7rem 1.5rem 4rem; }
+  .hero-badges { gap: 0.6rem; }
+  .cta-group { flex-direction: column; align-items: center; }
+  .about, .experiences, .reviews, .contact, .nature-banner { padding: 4.5rem 1.25rem; }
+  .exp-grid { grid-template-columns: 1fr; }
+  .intro-strip-inner { gap: 0; }
+  .stat { padding: 0.75rem 1.25rem; }
+  .stat-divider { height: 1px; width: 60%; }
+  .book-box { padding: 2rem 1.5rem; }
+}
