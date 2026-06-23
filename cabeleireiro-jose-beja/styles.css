@@ -224,7 +224,7 @@ img { display: block; max-width: 100%; }
 .badge-stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 0.06em; }
 .badge-text  { color: rgba(255,255,255,0.75); font-size: 0.82rem; }
 
-.hero-scroll {
+.hero-scroll, .hero-scroll-hint {
   text-align: center;
   color: rgba(255,255,255,0.25);
   font-size: 1.4rem;
@@ -360,7 +360,7 @@ img { display: block; max-width: 100%; }
   gap: 1rem;
 }
 
-.scissors {
+.scissors, .scissors-icon {
   font-size: 4.5rem;
   color: var(--accent-light);
   line-height: 1;
@@ -701,6 +701,35 @@ img { display: block; max-width: 100%; }
 
 .map-link:hover { color: var(--accent-dark); }
 
+/* ── Hours table ─────────────────────────────────────────────────────── */
+
+.hours-table {
+  border-collapse: collapse;
+  font-size: 0.93rem;
+  color: var(--ink);
+  margin-top: 0.25rem;
+}
+
+.hours-table td {
+  padding: 0.2rem 1.2rem 0.2rem 0;
+  vertical-align: top;
+}
+
+.hours-table td:first-child {
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.hours-table td:last-child {
+  color: var(--muted);
+}
+
+.hours-table .closed td {
+  color: var(--muted);
+  opacity: 0.6;
+}
+
 /* ── Footer ──────────────────────────────────────────────────────────── */
 
 .footer {
@@ -782,7 +811,7 @@ img { display: block; max-width: 100%; }
   .service-grid   { grid-template-columns: 1fr; }
   .review-grid    { grid-template-columns: 1fr; }
   .stat-divider   { display: none; }
-  .strip-inner    { gap: 1rem; }
+  .strip-inner    { gap: 1rem; flex-wrap: wrap; justify-content: center; }
   .stat           { padding: 0.5rem 1.5rem; }
   .map-placeholder { height: 250px; }
 
@@ -791,8 +820,14 @@ img { display: block; max-width: 100%; }
   .reviews,
   .contact        { padding: 4rem 1.25rem; }
 
+  .about-inner    { grid-template-columns: 1fr; gap: 2rem; }
+  .about-deco     { display: none; }
+
   .footer-inner   { flex-direction: column; text-align: center; }
   .footer-links   { text-align: center; }
+
+  .hours-table    { font-size: 0.85rem; }
+  .hours-table td:first-child { padding-right: 0.75rem; }
 }
 
 @media (max-width: 400px) {
