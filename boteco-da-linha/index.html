@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boteco Da Linha — Cozinha Portuguesa Tradicional em Cascais</title>
+  <meta name="description" content="Restaurante tradicional português junto à costa em São Pedro do Estoril, Cascais. Frutos do mar frescos, polvo grelhado, bife do entrecosto e batatas fritas caseiras. Aberto todos os dias exceto terça." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══ HERO ══════════════════════════════════════════ -->
+  <header class="hero" style="--hero-image: url('assets/hero.jpg')">
+    <nav class="nav">
+      <span class="brand">Boteco <em>Da Linha</em></span>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#ementa">Ementa</a></li>
+        <li><a href="#opiniones">Opiniões</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Cascais · São Pedro do Estoril · Desde 2012</div>
+      <h1>Boteco <em>Da Linha</em></h1>
+      <p class="tagline">Cozinha portuguesa de alma junto ao Atlântico — frutos do mar, boa carne e vinho da terra</p>
+      <a class="cta" href="tel:+351214686125">Reservar Mesa</a>
+    </div>
+  </header>
+
+  <!-- Azulejo tile stripe -->
+  <div class="tile-accent"></div>
+
+  <!-- ══ SOBRE ══════════════════════════════════════════ -->
+  <section id="sobre" class="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <span class="section-label">A Nossa História</span>
+        <h2>Sabores genuínos à beira-mar</h2>
+        <p class="lead">
+          Instalado no coração de São Pedro do Estoril, o Boteco Da Linha é um refúgio de cozinha portuguesa autêntica, onde o mar dita o que vai ao prato e a hospitalidade define a experiência.
+        </p>
+        <p>
+          Desde que abrimos portas em 2012, recebemos famílias, turistas e locais à procura do sabor verdadeiro — polvo tenro grelhado, bife do entrecosto na brasa, batatas fritas caseiras crocantes e vinhos regionais que fazem jus à refeição.
+        </p>
+        <p>
+          Com esplanada e ambiente acolhedor, o Boteco Da Linha é mais do que um restaurante: é o sítio onde a Linha do Estoril saboreia a sua melhor refeição.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">3.487</span>
+            <span class="stat-label">Avaliações online</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">94%</span>
+            <span class="stat-label">Recomendam no Facebook</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">4.3★</span>
+            <span class="stat-label">Nota média</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <div class="about-coastal-art">
+            <div class="coastal-wave-bg"></div>
+            <!-- SVG coastal illustration: Cascais coastline + seafood -->
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;">
+              <!-- Sky gradient -->
+              <defs>
+                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#0f4a62"/>
+                  <stop offset="100%" stop-color="#2e9fbf"/>
+                </linearGradient>
+                <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#1a6b8a"/>
+                  <stop offset="100%" stop-color="#0f3a50"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#sky)"/>
+              <!-- Sun/Moon -->
+              <circle cx="320" cy="60" r="28" fill="#c9932f" opacity="0.9"/>
+              <circle cx="320" cy="60" r="36" fill="#c9932f" opacity="0.2"/>
+              <!-- Horizon sea -->
+              <rect y="170" width="400" height="130" fill="url(#sea)"/>
+              <!-- Coastline silhouette -->
+              <path d="M0 170 Q40 150 80 165 Q120 175 160 160 Q200 150 240 162 Q280 172 320 158 Q360 145 400 155 L400 170 Z" fill="#0f3a50" opacity="0.8"/>
+              <!-- Waves -->
+              <path d="M0 210 Q30 200 60 210 Q90 220 120 210 Q150 200 180 210 Q210 220 240 210 Q270 200 300 210 Q330 220 360 210 Q390 200 400 210 L400 220 L0 220 Z" fill="#fff" opacity="0.12"/>
+              <path d="M0 240 Q40 230 80 240 Q120 250 160 240 Q200 230 240 240 Q280 250 320 240 Q360 230 400 240 L400 255 L0 255 Z" fill="#fff" opacity="0.08"/>
+              <!-- Decorative fish -->
+              <g transform="translate(60, 230)">
+                <ellipse rx="25" ry="11" fill="#c9932f" opacity="0.7"/>
+                <path d="M23 0 L38 -10 L38 10 Z" fill="#c9932f" opacity="0.7"/>
+                <circle cx="-12" cy="-3" r="3" fill="#0f3a50" opacity="0.6"/>
+              </g>
+              <g transform="translate(290, 250) scale(0.7)">
+                <ellipse rx="25" ry="11" fill="#c9932f" opacity="0.5"/>
+                <path d="M23 0 L38 -10 L38 10 Z" fill="#c9932f" opacity="0.5"/>
+              </g>
+              <!-- Building silhouette (tasca) -->
+              <rect x="150" y="135" width="60" height="35" fill="#0f2a3a" opacity="0.7"/>
+              <polygon points="145,135 215,135 180,110" fill="#0f2a3a" opacity="0.7"/>
+              <rect x="165" y="148" width="14" height="22" fill="#c9932f" opacity="0.4"/>
+              <!-- Stars -->
+              <circle cx="50" cy="40" r="1.5" fill="#fff" opacity="0.8"/>
+              <circle cx="90" cy="25" r="1" fill="#fff" opacity="0.6"/>
+              <circle cx="200" cy="30" r="1.5" fill="#fff" opacity="0.7"/>
+              <circle cx="350" cy="110" r="1" fill="#fff" opacity="0.5"/>
+            </svg>
+            <span style="position:relative;z-index:2;font-size:4rem;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.5));">🦑</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EMENTA ════════════════════════════════════════ -->
+  <section id="ementa" class="offerings">
+    <div class="offerings-header">
+      <span class="section-label">Os Nossos Pratos</span>
+      <h2>Destaques da Ementa</h2>
+      <p class="section-sub">Ingredientes frescos, receitas de família e o melhor que o Atlântico tem a oferecer.</p>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-art octopus-bg">
+          <span class="card-art-icon">🐙</span>
+        </div>
+        <div class="card-body">
+          <h3>Polvo à Lagareiro</h3>
+          <p>Polvo fresco grelhado, desfiado ou à lagareiro — macio por dentro, levemente tostado por fora. Um clássico português que os nossos clientes adoram.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art grill-bg">
+          <span class="card-art-icon">🥩</span>
+        </div>
+        <div class="card-body">
+          <h3>Bife do Entrecosto</h3>
+          <p>Entrecosto suculento grelhado na brasa, com molho da casa e guarnição tradicional. Ponto certo e sabor intenso em cada fatia.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art seafood-bg">
+          <span class="card-art-icon">🦐</span>
+        </div>
+        <div class="card-body">
+          <h3>Frutos do Mar</h3>
+          <p>Marisco fresco, gambas salteadas, amêijoas à Bulhão Pato — a linha costeira no seu prato. Selecção diária conforme a apanha.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art chips-bg">
+          <span class="card-art-icon">🍟</span>
+        </div>
+        <div class="card-body">
+          <h3>Batatas Fritas Caseiras</h3>
+          <p>Cortadas e fritas no momento, crocantes por fora e macias por dentro. Acompanhamento obrigatório — elogiado em centenas de avaliações.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art seafood-bg">
+          <span class="card-art-icon">🐟</span>
+        </div>
+        <div class="card-body">
+          <h3>Peixe Grelhado do Dia</h3>
+          <p>Robalo, dourada, rodovalho — o peixe do dia grelhado com azeite, alho e limão. Simples, honesto e extraordinariamente saboroso.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art wine-bg">
+          <span class="card-art-icon">🍷</span>
+        </div>
+        <div class="card-body">
+          <h3>Vinhos Regionais</h3>
+          <p>Carta de vinhos cuidadosamente selecionada com produções locais — brancos frescos e tintos encorpados que acompanham cada prato na perfeição.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ══ OPINIÕES ══════════════════════════════════════ -->
+  <section id="opiniones" class="reviews">
+    <div style="max-width: var(--maxw); margin-inline: auto;">
+      <span class="section-label" style="color: var(--gold); display: block; margin-bottom: 0.5rem;">O Que Dizem os Clientes</span>
+      <h2>Opiniões Reais</h2>
+      <p class="section-sub" style="color: rgba(255,255,255,0.65); margin-bottom: 0;">Mais de 3.400 avaliações em várias plataformas — a voz dos nossos clientes fala por si.</p>
+    </div>
+    <div class="review-grid">
+
+      <blockquote class="review">
+        <div class="review-stars">★★★★★</div>
+        <p>"Delicious seafood, particularly octopus and ribeye steak. Friendly service with charming atmosphere."</p>
+        <cite>— Avaliadores no Restaurant Guru · 4.3★</cite>
+      </blockquote>
+
+      <blockquote class="review">
+        <div class="review-stars">★★★★★</div>
+        <p>"High quality traditional Portuguese cuisine with homemade chips. Fast service and nice local wines."</p>
+        <cite>— Avaliadores no Facebook e Tripadvisor · 4.3★</cite>
+      </blockquote>
+
+    </div>
+    <div class="review-aggregate">
+      <div class="agg-item">
+        <span class="agg-num">3.487</span>
+        <span class="agg-label">Avaliações no Restaurant Guru</span>
+      </div>
+      <div class="agg-item">
+        <span class="agg-num">542</span>
+        <span class="agg-label">Seguidores no Facebook</span>
+      </div>
+      <div class="agg-item">
+        <span class="agg-num">94%</span>
+        <span class="agg-label">Recomendam</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ HORÁRIOS ══════════════════════════════════════ -->
+  <div class="hours-band">
+    <h3>Horário de Funcionamento</h3>
+    <p>Aberto todos os dias · 12h30 — 00h00</p>
+    <p class="hours-note">Encerrado às terças-feiras</p>
+  </div>
+
+  <!-- ══ CONTACTO ══════════════════════════════════════ -->
+  <section id="contacto" class="contact">
+    <div class="contact-inner">
+      <span class="section-label">Venha Visitar-nos</span>
+      <h2>Como Chegar</h2>
+      <p class="section-sub">Junto à linha do comboio e a poucos passos da praia — fácil de chegar, difícil de esquecer.</p>
+
+      <div class="contact-details">
+        <div class="contact-row">
+          <div class="contact-icon">📍</div>
+          <div class="contact-text">
+            <strong>Morada</strong>
+            Rua Sacadura Cabral, 116, São Pedro do Estoril, Cascais
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">📞</div>
+          <div class="contact-text">
+            <strong>Telefone</strong>
+            +351 214 686 125
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-text">
+            <strong>Email</strong>
+            geral@botecoDalinha.pt
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-text">
+            <strong>Horário</strong>
+            Seg · Qua–Dom: 12h30 – 00h00 &nbsp;|&nbsp; Terça: Encerrado
+          </div>
+        </div>
+      </div>
+
+      <a class="cta" href="tel:+351214686125">Ligar Agora</a>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-brand">Boteco <em>Da Linha</em></div>
+    <p>Rua Sacadura Cabral, 116 · São Pedro do Estoril · Cascais</p>
+    <hr class="footer-sep" />
+    <p class="footer-meta">+351 214 686 125 &nbsp;·&nbsp; geral@botecoDalinha.pt</p>
+    <p class="mockup-note">Website de demonstração · elaborado como proposta · sem afiliação oficial</p>
+  </footer>
+
+</body>
+</html>
